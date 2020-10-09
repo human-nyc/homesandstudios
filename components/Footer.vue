@@ -12,11 +12,7 @@
 </template>
 
 <script>
-<<<<<<< HEAD
-export default {};
-=======
 export default {}
->>>>>>> ab00d3513dc147b06d309e1daf244a482fa115d4
 </script>
 
 <style lang="scss" scoped>
