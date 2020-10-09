@@ -3,7 +3,7 @@
 body {
   font-family: var(--main-font);
   font-size: 14px;
-  line-height: 1.15;
+  line-height: 1;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -42,19 +42,17 @@ img {
 .container {
   margin: 0 auto;
   min-height: calc(100vh - 77px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // text-align: center;
 }
 
 .title {
   display: block;
   font-size: 50px;
-  letter-spacing: 1px;
 }
-
-.subtitle {
-  font-size: 30px;
-  padding-bottom: 15px;
+section {
+  border-bottom: 1px solid;
+  padding: var(--gutter);
 }

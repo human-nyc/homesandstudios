@@ -2,18 +2,16 @@
   <div class="wrapper">
     <Header />
     <div class="container">
-      <h1 class="title">Homepage</h1>
+      <section class="hero">live stream</section>
 
-      <div class="hero">live stream</div>
-
-      <div class="about">
-        Social Studies is a multi-day experience that brings artists and brands
+      <section class="about">
+        Social Studies is a multi-day experience that brings artists and brands
         together for community-driven programming, with the primary goal of
-        empowering and educating underserved youth to exercise and access their
+        empowering and educating underserved youth to exercise and access their
         creativity.
-      </div>
+      </section>
 
-      <div class="events">Upcoming Events</div>
+      <section class="events">Upcoming Events</section>
 
       <div class="post-wrapper">
         <!-- <Post :post="post" class="post" /> -->
