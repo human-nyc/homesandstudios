@@ -2,9 +2,7 @@
   <div class="wrapper">
     <Header />
     <div class="container">
-      <h1 class="title">
-        Gallery
-      </h1>
+      <h1 class="title">Gallery</h1>
       <div class="post-wrapper">
         <!-- <Post :post="post" class="post" /> -->
       </div>
@@ -60,10 +58,10 @@ import Footer from '~/components/Footer.vue'
 export default {
   components: {
     Header,
-    Footer
+    Footer,
     // PostListItem,
     // Post,
-  }
+  },
   // async asyncData ({ route, params }) {
   //   const data = await client.fetch(query)
   //   const postIndex = params.slug
