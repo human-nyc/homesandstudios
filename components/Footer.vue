@@ -1,17 +1,18 @@
 <template>
   <div class="footer">
-    <a href="https://instagram.com/SocialStudiesworldwide" class="link" target="_blank">
+    <a
+      href="https://instagram.com/SocialStudiesworldwide"
+      class="link"
+      target="_blank"
+    >
       @SocialStudiesworldwide
     </a>
-    <span class="copyright">
-      © 2020 SOCIAL STUDIES Worldwide LLC.
-    </span>
+    <span class="copyright"> © 2020 SOCIAL STUDIES Worldwide LLC. </span>
   </div>
 </template>
 
 <script>
-export default {
-}
+export default {};
 </script>
 
 <style lang="scss" scoped>

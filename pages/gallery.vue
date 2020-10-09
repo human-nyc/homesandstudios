@@ -2,9 +2,7 @@
   <div class="wrapper">
     <Header />
     <div class="container">
-      <h1 class="title">
-        Gallery
-      </h1>
+      <h1 class="title">Gallery</h1>
       <div class="post-wrapper">
         <!-- <Post :post="post" class="post" /> -->
       </div>
@@ -25,8 +23,8 @@
 
 <script>
 // import sanityClient from '@sanity/client'
-import Header from '~/components/Header.vue'
-import Footer from '~/components/Footer.vue'
+import Header from "~/components/Header.vue";
+import Footer from "~/components/Footer.vue";
 
 // const client = sanityClient({
 //   projectId: 'v4q6145o',
@@ -60,10 +58,10 @@ import Footer from '~/components/Footer.vue'
 export default {
   components: {
     Header,
-    Footer
+    Footer,
     // PostListItem,
     // Post,
-  }
+  },
   // async asyncData ({ route, params }) {
   //   const data = await client.fetch(query)
   //   const postIndex = params.slug
@@ -85,11 +83,11 @@ export default {
   //     postIndex: 0
   //   }
   // }
-}
+};
 </script>
 
 <style lang="scss">
-@import '~/styles/style.scss';
+@import "~/styles/style.scss";
 </style>
 
 <style lang="scss" scoped>
