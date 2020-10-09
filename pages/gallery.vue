@@ -23,8 +23,8 @@
 
 <script>
 // import sanityClient from '@sanity/client'
-import Header from "~/components/Header.vue";
-import Footer from "~/components/Footer.vue";
+import Header from '~/components/Header.vue'
+import Footer from '~/components/Footer.vue'
 
 // const client = sanityClient({
 //   projectId: 'v4q6145o',
@@ -83,11 +83,11 @@ export default {
   //     postIndex: 0
   //   }
   // }
-};
+}
 </script>
 
 <style lang="scss">
-@import "~/styles/style.scss";
+@import '~/styles/style.scss';
 </style>
 
 <style lang="scss" scoped>
