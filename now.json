@@ -1,0 +1,11 @@
+{
+  "name": "social studies",
+  "version": 1,
+  "builds": [
+    {
+      "src": "nuxt.config.js",
+      "use": "@nuxtjs/now-builder",
+      "config": {}
+    }
+  ]
+}
