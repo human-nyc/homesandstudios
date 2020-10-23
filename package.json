@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
-    "@nuxtjs/pwa": "^3.0.2",
+    "@nuxtjs/pwa": "^3.2.2",
     "@sanity/client": "^2.0.1",
     "core-js": "^3.6.5",
     "eslint-loader": "^4.0.2",
