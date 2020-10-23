@@ -18,7 +18,7 @@
     "core-js": "^3.6.5",
     "eslint-loader": "^4.0.2",
     "node-sass": "^4.14.1",
-    "nuxt": "^2.14.6",
+    "nuxt": "^2.14.7",
     "sanity-blocks-vue-component": "^0.1.0",
     "sass-loader": "^10.0.2"
   },
