@@ -1,4 +1,4 @@
-# socialstudies
+# homes and studios
 
 ## Build Setup
 

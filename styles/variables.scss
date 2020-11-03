@@ -1,5 +1,15 @@
+@import 'fonts.scss';
+
 :root {
-  --gutter: 10px;
   --main-font: helvetica, arial, sans-serif;
-  --secondary-font: helvetica, arial, sans-serif;
+  --secondary-font: times, serif;
+  --fast: 400ms;
+  --slow: 800ms;
+
+  @media (max-width: 1023px) {
+    --gutter: 10px;
+  }
+  @media (min-width: 1024px) {
+    --gutter: 20px;
+  }
 }

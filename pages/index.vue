@@ -2,29 +2,20 @@
   <div class="wrapper">
     <Header />
     <div class="container">
-      <section class="hero">live stream</section>
-
-      <section class="about">
-        Social Studies is a multi-day experience that brings artists and brands
-        together for community-driven programming, with the primary goal of
-        empowering and educating underserved youth to exercise and access their
-        creativity.
-      </section>
-
-      <section class="events">Upcoming Events</section>
-
-      <div class="post-wrapper">
-        <!-- <Post :post="post" class="post" /> -->
-      </div>
       <div class="posts">
-        <!-- <PostListItem
+        <PostListItem
           v-for="(postItem, index) in posts"
           :key="postItem._id"
-          :class="['post-item', { current: index == postIndex }]"
+          class="postItem"
           :index="index"
           :post="postItem"
-          :post-index="postIndex"
-        /> -->
+        />
+      </div>
+      <div class="content">
+        <h4>
+          {{ home ? home.title : 'no home found :(' }}
+        </h4>
+        <BlockContent v-if="home.body" :blocks="home.body" />
       </div>
     </div>
     <Footer />
@@ -32,67 +23,63 @@
 </template>
 
 <script>
-// import sanityClient from '@sanity/client'
-import Header from '~/components/Header.vue'
-import Footer from '~/components/Footer.vue'
+import sanityClient from '@sanity/client'
+import BlockContent from 'sanity-blocks-vue-component'
 
-// const client = sanityClient({
-//   projectId: 'v4q6145o',
-//   dataset: 'production',
-//   useCdn: true
-// })
+const client = sanityClient({
+  projectId: 'zyy4ftd8',
+  dataset: 'production',
+  // useCdn: true,
+})
 
-// const query = `
-//   {
-//     "posts": *[_type == "post"]{
-//       "id": _id,
-//       "title": title,
-//       "body": body,
-//       "slug": slug.current,
-//       "header": header,
-//       "mainImage": mainImage.asset->url,
-//       "trackId": trackId,
-//       "trackUrl": trackUrl,
-//       "publishedAt": publishedAt
-//     } | order(publishedAt desc),
-//     "about": *[_type == "page" && slug.current == "about"][0]{
-//       "id": _id,
-//       "title": title,
-//       "body": body,
-//       "mainImage": mainImage.asset->url,
-//       "slug": slug.current,
-//       "publishedAt": publishedAt
-//     }
-//   }
-// `
+const query = `
+  {
+    "posts": *[_type == "post"]{
+      "id": _id,
+      "title": title,
+      "body": body,
+      "slug": slug.current,
+      "mainImage": mainImage.asset->url,
+      "publishedAt": publishedAt
+    } | order(publishedAt desc),
+    "pages": *[_type == "page"]{
+      "id": _id,
+      "title": title,
+      "body": body,
+      "mainImage": mainImage.asset->url,
+      "slug": slug.current,
+      "publishedAt": publishedAt
+    },
+    "home": *[_type == "page" && slug.current == "home"][0]{
+      "id": _id,
+      "title": title,
+      "body": body,
+      "mainImage": mainImage.asset->url,
+      "slug": slug.current,
+      "publishedAt": publishedAt
+    }
+  }
+`
 export default {
   components: {
-    Header,
-    Footer,
-    // PostListItem,
-    // Post,
+    BlockContent,
   },
-  // async asyncData ({ route, params }) {
-  //   const data = await client.fetch(query)
-  //   const postIndex = params.slug
-  //     ? data.posts
-  //       .map((post, i) => (post.slug === params.slug ? i : null))
-  //       .filter(el => el != null)[0]
-  //     : -1
-
-  //   return {
-  //     posts: data.posts,
-  //     post: postIndex === -1 ? data.about : data.posts[postIndex],
-  //     postIndex
-  //   }
-  // },
-  // data () {
-  //   return {
-  //     posts: [],
-  //     post: '',
-  //     postIndex: 0
-  //   }
-  // }
+  async asyncData({ route, params }) {
+    const data = await client.fetch(query)
+    return {
+      pages: data.pages,
+      posts: data.posts,
+      home: data.home,
+      test: 'test',
+    }
+  },
+  data() {
+    return {
+      pages: [],
+      posts: [],
+      home: {},
+    }
+  },
 }
 </script>
 
@@ -101,14 +88,7 @@ export default {
 </style>
 
 <style lang="scss" scoped>
-.title {
-  // background: red;
-}
-.about {
-  font-size: 40px;
-
-  @media (min-width: 1024px) {
-    font-size: 80px;
-  }
+.content {
+  padding: var(--gutter);
 }
 </style>

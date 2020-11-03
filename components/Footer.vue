@@ -1,13 +1,6 @@
 <template>
   <div class="footer">
-    <a
-      href="https://instagram.com/SocialStudiesworldwide"
-      class="link"
-      target="_blank"
-    >
-      @SocialStudiesworldwide
-    </a>
-    <span class="copyright"> © 2020 SOCIAL STUDIES Worldwide LLC. </span>
+    <span class="copyright"> © 2020 Copyright </span>
   </div>
 </template>
 
@@ -18,7 +11,7 @@ export default {}
 <style lang="scss" scoped>
 .footer {
   padding: var(--gutter);
-  border-top: 1px solid;
+  // border-top: 1px solid;
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
