@@ -2,7 +2,7 @@
   <div class="wrapper">
     <Header />
     <div class="container">
-      <h1 class="title">Post: {post.title}</h1>
+      <h1 class="title">{{ post.title }}</h1>
       <div class="post-body">
         <BlockContent v-if="post.body" :blocks="post.body" />
       </div>
@@ -26,6 +26,7 @@ const query = `
     "posts": *[_type == "post"]{
       "id": _id,
       "title": title,
+      "location": location,
       "body": body,
       "slug": slug.current,
       "mainImage": mainImage.asset->url,

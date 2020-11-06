@@ -18,9 +18,11 @@ body {
   box-sizing: border-box;
 }
 h1, h2, h3, h4, h5 {
-  font-size: inherit;
   font-weight: normal;
   margin: 0;
+}
+h1, h2 {
+  text-transform: uppercase;
 }
 a {
   color: inherit;
@@ -43,14 +45,14 @@ img {
 
 .container {
   margin: 0 auto;
-  min-height: calc(100vh - 77px);
+  min-height: 100vh;
   
   @media (min-width: 1024px) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 4fr 3fr;
   }
 }
-.posts {
+.list {
   @media (min-width: 1024px) {
     border-right: 1px solid;
   }

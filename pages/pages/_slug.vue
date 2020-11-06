@@ -2,7 +2,7 @@
   <div class="wrapper">
     <Header />
     <div class="container">
-      <h1 class="title">Page: {page.title}</h1>
+      <h1 class="title">Page: {{ page.title }}</h1>
       <div class="page-body">
         <BlockContent v-if="page.body" :blocks="page.body" />
       </div>

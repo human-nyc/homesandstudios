@@ -1,9 +1,6 @@
 <template>
   <div class="header">
-    <nuxt-link to="/" class="logo">Homes and studios</nuxt-link>
-    <nuxt-link to="page" class="link">Page</nuxt-link>
-    <nuxt-link to="page" class="link">Page</nuxt-link>
-    <nuxt-link to="page" class="link">Page</nuxt-link>
+    <nuxt-link to="/" class="logo">Homes + Studios</nuxt-link>
   </div>
 </template>
 
@@ -13,21 +10,17 @@ export default {}
 
 <style lang="scss" scoped>
 .header {
-  padding: var(--gutter);
+  align-items: center;
+  background-color: #fcf951;
   border-bottom: 1px solid;
-  text-transform: uppercase;
+  color: black;
   display: flex;
-  justify-content: space-between;
+  padding: var(--gutter);
+  text-transform: uppercase;
+  justify-content: center;
 
-  // @media (min-width: 1024px) {
-
-  // }
-
-  .logo {
-    margin-right: 1em;
-  }
-  .link {
-    margin-right: 1em;
+  @media (min-width: 1024px) {
+    font-size: 26px;
   }
 }
 </style>

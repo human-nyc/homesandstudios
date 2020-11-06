@@ -30,16 +30,6 @@ export default {
       default: () => {},
     },
   },
-  methods: {
-    time(publishedAt) {
-      this.publishedAt = publishedAt
-      return (
-        publishedAt.split('T')[0] +
-        ' ' +
-        publishedAt.split('T')[1].replace('Z', '')
-      )
-    },
-  },
 }
 </script>
 

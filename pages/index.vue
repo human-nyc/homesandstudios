@@ -2,12 +2,11 @@
   <div class="wrapper">
     <Header />
     <div class="container">
-      <div class="posts">
+      <div class="list">
         <PostListItem
-          v-for="(postItem, index) in posts"
+          v-for="postItem in posts"
           :key="postItem._id"
           class="postItem"
-          :index="index"
           :post="postItem"
         />
       </div>
@@ -29,7 +28,7 @@ import BlockContent from 'sanity-blocks-vue-component'
 const client = sanityClient({
   projectId: 'zyy4ftd8',
   dataset: 'production',
-  // useCdn: true,
+  useCdn: true,
 })
 
 const query = `
@@ -37,9 +36,10 @@ const query = `
     "posts": *[_type == "post"]{
       "id": _id,
       "title": title,
+      "location": location,
       "body": body,
-      "slug": slug.current,
       "mainImage": mainImage.asset->url,
+      "slug": slug.current,
       "publishedAt": publishedAt
     } | order(publishedAt desc),
     "pages": *[_type == "page"]{
@@ -70,7 +70,6 @@ export default {
       pages: data.pages,
       posts: data.posts,
       home: data.home,
-      test: 'test',
     }
   },
   data() {
