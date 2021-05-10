@@ -15,7 +15,7 @@
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/pwa": "^3.0.2",
     "@sanity/client": "^2.0.1",
-    "core-js": "^3.6.5",
+    "core-js": "^3.12.1",
     "eslint-webpack-plugin": "^2.1.0",
     "nuxt": "^2.14.6",
     "sanity-blocks-vue-component": "^0.1.0",
